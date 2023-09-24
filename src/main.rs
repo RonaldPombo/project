@@ -1,3 +1,4 @@
+        //All code here is me trying to learn Rust using the Rust by Example document
 fn main() {
     //basic
     println!("The start");
@@ -19,4 +20,31 @@ fn main() {
     println!("Base 8 (octal):        {:o}", 69);
     println!("Base 16 (hexadecimal): {:x}", 69);
     println!("Base 16 (hexadecimal): {:X}", 69);
+
+    //Make spaces before or after the argument
+    println!("\n\nFormat");
+    //Five spaces before the number
+    println!("{number:>5} spaces before the number", number=2);
+    //Five spaces after the number
+    println!("{number:<5} spaces after the number", number=2);
+    //five zeros before the number
+    println!("{number:0>5} zeros before the number", number=2);
+    //five zeros after the number
+    println!("{number:0<5} zeros after the number", number=2);
+    //five zeros before the number using named argument
+    println!("{number:0>width$} zeros before the number using named argument to change the width", number=2, width=5);
+
+    //Enable dead code (code that isn't used anywhere)
+    //#[allow(dead_code)]
+    //struct Structure(i32);
+
+    //Interesting things or tests
+    //println!("\n\nTests");
+    //println!("This struct `{}` won't print...", Structure(3));
+
+    //five zeros befero the number, but with variables
+    println!("\n\nfive zeros using variables");
+    let number: f64 = 2.0;
+    let width: usize = 4;
+    println!("{number:>width$}");
 }
